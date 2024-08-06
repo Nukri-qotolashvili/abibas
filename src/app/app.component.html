@@ -1,0 +1,33 @@
+<main>
+  <header>
+    <section id="logo">
+      <a [routerLink]="navigationItems[0].path">
+        <img src="../assets/images/logo/logo.jpg" alt="logo image" />
+      </a>
+    </section>
+    <section id="nav">
+      <ul>
+        @for(nav of navigationItems; track nav.path){
+        <li>
+          <a
+            [routerLink]="nav.path"
+            [routerLinkActive]="nav?.activeClassName || 'active'"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >{{ nav.title }}</a
+          >
+        </li>
+        }
+      </ul>
+    </section>
+  </header>
+  <router-outlet></router-outlet>
+  <footer>
+    <p id="best">ABIBAS, THE BEST BRAND IN THE ENTIRE WORLD</p>
+    <div id="card">
+      <p id="share">share your friends your websait with QR-code</p>
+      <div id="QR">
+        <img src="{{ imgUrl }}" alt="" />
+      </div>
+    </div>
+  </footer>
+</main>

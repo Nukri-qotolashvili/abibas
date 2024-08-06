@@ -1,0 +1,100 @@
+$color-black: #000000;
+$color-white: #ffffff;
+$color-owerlay: #818181a8;
+$color-gray: #8080809e;
+
+main {
+  padding: 100px 100px 160px;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  row-gap: 10px;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: $color-owerlay;
+  a {
+    width: fit-content;
+    height: fit-content;
+    z-index: 3;
+    text-decoration: none;
+    section {
+      border: 1px solid $color-black;
+      width: 18rem;
+      height: 27rem;
+      overflow: hidden;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      transition: 1s;
+      border-radius: 5px;
+      &:hover {
+        width: 21rem;
+        height: 32rem;
+        border-radius: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        p {
+          padding: 10px;
+          border: 1px solid $color-black;
+          border-radius: 10px;
+          background-color: $color-owerlay;
+          width: 80%;
+          color: $color-white;
+          font-size: 20px;
+          font-style: italic;
+          letter-spacing: 3px;
+        }
+      }
+      &#men {
+        background-image: url(../../../assets/images/products/men/men.jpg);
+      }
+      &#women {
+        background-image: url(../../../assets/images/products/women/women.jpg);
+      }
+      &#kids {
+        background-image: url(../../../assets/images/products/kids/kids.jpg);
+      }
+
+      P {
+        margin-top: 5px;
+        text-align: center;
+        color: $color-black;
+      }
+    }
+  }
+}
+@media screen and (max-width: 520px) and (min-width: 380px) {
+  main {
+    padding: 100px 0px 160px;
+    a {
+      section {
+        width: 16rem;
+        height: 25rem;
+        &:hover {
+          width: 16rem;
+          height: 25rem;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 380px) and (min-width: 260px) {
+  main {
+    padding: 100px 0px 160px;
+    a {
+      section {
+        width: 16rem;
+        height: 25rem;
+        &:hover {
+          width: 16rem;
+          height: 25rem;
+        }
+      }
+    }
+  }
+}

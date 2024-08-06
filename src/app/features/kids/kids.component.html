@@ -1,0 +1,40 @@
+<main>
+  <section id="kidsBackground">
+    <img
+      src="../../../assets/images/products/kids/kids-background.jpg"
+      alt=""
+    />
+    <div>
+      <h1>SAVE ON KIDS STYLES</h1>
+      <P
+        >get an extra 30% off eligible full price and sale kids styles! Code:
+        KIDS</P
+      >
+      <button>SHOP NOW</button>
+    </div>
+  </section>
+  <section id="shoes">
+    <aside>
+      <button (click)="shoes()">Shoes</button>
+      <button (click)="clothes()">Clothes</button>
+    </aside>
+    <aside>
+      @if(choes == "shoes"){ @for(items of shoesProducts; track shoesProducts){
+      <div id="card">
+        <img src="{{ items.image }}" alt="" />
+        <h2>{{ items.title }}</h2>
+        <button>Shop Now</button>
+        <div id="owerlay"></div>
+      </div>
+      } } @if(choes == "clothes"){ @for(items of clothesProducts; track
+      clothesProducts){
+      <div id="card">
+        <img src="{{ items.image }}" alt="" />
+        <h2>{{ items.title }}</h2>
+        <button>Shop Now</button>
+        <div id="owerlay"></div>
+      </div>
+      } }
+    </aside>
+  </section>
+</main>

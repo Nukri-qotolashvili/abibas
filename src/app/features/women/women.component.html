@@ -1,0 +1,40 @@
+<main>
+  <section id="bestFit">
+    <img
+      src="../../../assets/images/products/women/best-fit-forward.jpg"
+      alt=""
+    />
+    <div>
+      <h1>best fit forward</h1>
+      <P
+        >from sneakers to matching sets, shop spotlight-stealing styles for back
+        to school.</P
+      >
+      <button>SHOP NOW</button>
+    </div>
+  </section>
+  <section id="shoes">
+    <aside>
+      <button (click)="shoes()">Shoes</button>
+      <button (click)="clothes()">Clothes</button>
+    </aside>
+    <aside>
+      @if(choes == "shoes"){ @for(items of shoesProducts; track shoesProducts){
+      <div id="card">
+        <img src="{{ items.image }}" alt="" />
+        <h2>{{ items.title }}</h2>
+        <button>Shop Now</button>
+        <div id="owerlay"></div>
+      </div>
+      } } @if(choes == "clothes"){ @for(items of clothesProducts; track
+      clothesProducts){
+      <div id="card">
+        <img src="{{ items.image }}" alt="" />
+        <h2>{{ items.title }}</h2>
+        <button>Shop Now</button>
+        <div id="owerlay"></div>
+      </div>
+      } }
+    </aside>
+  </section>
+</main>

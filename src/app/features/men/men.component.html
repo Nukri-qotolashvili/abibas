@@ -1,0 +1,37 @@
+<main>
+  <section id="ultraboost">
+    <img src="../../../assets/images/products/men/menultra.jpg" alt="" />
+    <div>
+      <h1>ULTRABOOST 5X</h1>
+      <P
+        >Lighter, faster, more supportive. Energize your runs in the newest
+        Ultraboost.</P
+      >
+      <button [routerLink]="ultraboost[0].path">SHOP NOW</button>
+    </div>
+  </section>
+  <section id="shoes">
+    <aside>
+      <button (click)="shoes()">Shoes</button>
+      <button (click)="clothes()">Clothes</button>
+    </aside>
+    <aside>
+      @if(choes == "shoes"){ @for(items of shoesProducts; track shoesProducts){
+      <div id="card">
+        <img src="{{ items.image }}" alt="" />
+        <h2>{{ items.title }}</h2>
+        <button>Shop Now</button>
+        <div id="owerlay"></div>
+      </div>
+      } } @if(choes == "clothes"){ @for(items of clothesProducts; track
+      clothesProducts){
+      <div id="card">
+        <img src="{{ items.image }}" alt="" />
+        <h2>{{ items.title }}</h2>
+        <button>Shop Now</button>
+        <div id="owerlay"></div>
+      </div>
+      } }
+    </aside>
+  </section>
+</main>

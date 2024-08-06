@@ -1,0 +1,195 @@
+$color-white: #ffffff;
+$color-black: #000000;
+$color-green: #008000;
+$color-owerlay: #35353562;
+$color-hover: #f0f0f0;
+$color-button: #ffffff22;
+
+main {
+  padding-top: 50px;
+  padding-bottom: 150px;
+  width: 100%;
+  section#kidsBackground {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    img {
+      width: 100%;
+      object-position: top;
+    }
+    div {
+      display: flex;
+      flex-direction: column;
+      row-gap: 15px;
+      width: 20%;
+      position: absolute;
+      z-index: 1;
+      top: 65%;
+      left: 7%;
+      h1 {
+        font-size: clamp(15px, 2vw, 40px);
+        color: $color-white;
+      }
+      p {
+        color: $color-white;
+        font-size: clamp(12px, 2vw, 20px);
+      }
+      button {
+        width: 150px;
+        height: 50px;
+        cursor: pointer;
+        font-weight: 600;
+        letter-spacing: 2px;
+        background-color: $color-button;
+        color: $color-white;
+      }
+    }
+  }
+  section#shoes {
+    padding: 50px 150px;
+    width: 100%;
+    box-sizing: border-box;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    aside {
+      &:nth-child(1) {
+        width: 99vw;
+        padding-bottom: 50px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        column-gap: 5%;
+        button {
+          width: 40%;
+          height: 40px;
+        }
+      }
+      &:nth-child(2) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px;
+        div#card {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 270px;
+          height: 300px;
+          border: 1px solid $color-black;
+          div#owerlay {
+            position: absolute;
+            width: 270px;
+            height: 300px;
+            background-color: $color-owerlay;
+            opacity: 0;
+          }
+          &:hover {
+            button {
+              display: block;
+            }
+            div#owerlay {
+              opacity: 1;
+            }
+          }
+          img {
+            width: 100%;
+            height: 100%;
+          }
+          h2 {
+            font-size: 16px;
+            bottom: 0px;
+          }
+          button {
+            position: absolute;
+            width: 130px;
+            height: 35px;
+            border-radius: 3px;
+            border: none;
+            background-color: $color-white;
+            color: $color-black;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 130px;
+            display: none;
+            z-index: 1;
+            letter-spacing: 1px;
+            &:hover {
+              background-color: $color-hover;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1250px) and (min-width: 460px) {
+  main {
+    section#kidsBackground {
+      div {
+        width: 70%;
+        top: 40%;
+        button {
+          width: 120px;
+          height: 40px;
+          font-weight: 400;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 460px) and (min-width: 260px) {
+  main {
+    section#kidsBackground {
+      div {
+        width: 70%;
+        top: 20%;
+        button {
+          width: 120px;
+          height: 20px;
+          font-weight: 200;
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) and (min-width: 260px) {
+  main {
+    padding-top: 70px;
+    section#shoes {
+      padding: 5px;
+      aside {
+        &:nth-child(1) {
+          padding: 5px;
+        }
+        &:nth-child(2) {
+          div#card {
+            width: 255px;
+            height: 280;
+            div#owerlay {
+              width: 255px;
+              height: 280px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 310px) and (min-width: 260px) {
+  main {
+    section#kidsBackground {
+      div {
+        p {
+          display: none;
+        }
+      }
+    }
+  }
+}
