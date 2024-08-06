@@ -24,7 +24,7 @@ export class AppComponent implements OnInit {
   readonly appNAME = APP_NAME;
   readonly navigationItems = NAVIGATION_ITEMS;
   private readonly http = inject(HttpClient);
-  text = 'http://localhost:4200/';
+  text = 'https://abibas-n1.firebaseapp.com/';
   imgUrl = '';
   ngOnInit(): void {
     this.generateQR();
